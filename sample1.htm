@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <title>My first web page</title>
+    <link rel="stylesheet" href="style.css">
+<body bgcolor="#B4BEBE">
+<div id="form-main">
+  <div id="form-div">
+    <form class="form" id="form1">
+      
+      <p class="username">
+        <input name="username" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Username" id="username" />
+      </p>
+      
+      <p class="password">
+        <input name="password" type="text" class="validate[required,custom[email]] feedback-input" id="password" placeholder="Password"/>
+      </p>
+     
+     <div class="login">
+        <input type="submit" value="Login" id="button-blue"/>
+        <div class="ease"></div>
+
+      </div>
+    </form>
+  </div>
+</body>
+</html>
