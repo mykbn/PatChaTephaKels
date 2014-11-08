@@ -1,0 +1,53 @@
+body{
+	background-image: url("_backgrounds/gradient_pink_2391416.jpg");
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;
+}
+div#main-div{
+	width: 50%;
+	height: 50%;
+	background-color: rgba(0,0,0,.2);
+	border-radius: 25px;
+	/*background-image: url("_backgrounds/white.jpg");*/
+	/*background-repeat: no-repeat;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+ 	-o-background-size: cover;
+ 	background-size: cover;*/
+}
+div.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#unamebox.textbox{
+	position:absolute;
+	width: 70%;
+	height: 10%;
+	border-style: none;
+	border: solid rgba(0,0,0,.2) 0.1px;
+	border-radius: 5px;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%, -50%);
+}
+#pwordbox.textbox{
+	position:absolute;
+	width: 70%;
+	height: 10%;
+	border-style: none;
+	border: solid rgba(0,0,0,.2) 0.1px;
+	border-radius: 5px;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%, 60%);
+}
+input{
+	font-size: 20px;
+	padding-left: 10px;
+
+}
