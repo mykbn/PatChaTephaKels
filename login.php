@@ -3,11 +3,6 @@
 $inputUsername = $_POST['username'];
 $inputPassword = $_POST['password'];
 
-// $username = "root";
-// $password= "";
-// $database = "ceumoodle_database";
-// $serverName = "localhost";
-
 //Initialize Database Connection
 $conn = new mysqli("localhost", "root", "", "ceumoodle_database");
 
@@ -15,39 +10,38 @@ $conn = new mysqli("localhost", "root", "", "ceumoodle_database");
 if($conn->connect_error){
 	die("Connection Failed:" .$conn->connect_error);
 }
-echo "Connected Successfully";
+// echo "Connected Successfully To Database!";
 
-$queryUsername = "SELECT * FROM users WHERE 'Username' = '$inputUsername'";
+//Username
+$queryUsername = "SELECT * FROM users WHERE '$inputUsername' = Username";
 $resultUsername = mysqli_query($conn,$queryUsername)
 	or die("Error: ".mysqli_error($conn));
 $rowUser = mysqli_fetch_array($resultUsername);
 $serverUser = $rowUser["Username"];
 
-// $queryUsername = "SELECT * FROM 'users'";
-// $queryPassword = "SELECT * FROM 'users' WHERE 'Password' = '$inputPassword'";
+//Password
+$queryPassword = "SELECT * FROM users WHERE '$inputPassword' = Password";
+$resultPassword = mysqli_query($conn,$queryPassword)
+	or die("Error: ".mysqli_error($conn));
+$rowPassword = mysqli_fetch_array($resultPassword);
+$serverPassword = $rowPassword["Password"];
 
-// $resultUsername = mysql_query($queryUsername);
-// $resultPassword = mysql_query($queryPassword);
-
-// echo $resultPasswordUsername;
-// $rowUser = mysql_fetch_array($resultUsername);
-// $rowPass = mysql_fetch_array($resultPassword);
-
-// $serverUser = $rowUser["Username"];
-// $serverPass = $rowPass["Password"];
-
-// echo $queryUsername;
-// echo $queryPassword;
-
-if($inputUsername == $serverUser){
-	echo "Successful!";
+//Check if login credentials are correct
+if($inputUsername == $serverUser && $inputPassword == $serverPassword){
+	echo "<br/>Correct Credentials!";
+}else{
+	// echo "<br/>Incorrect Login Information";
+	// header("Location: login.htm");
+	readfile("login.htm");
+	// echo '<head>';
+ //    echo ' <link rel="stylesheet" href="login.css" type="text/css">';
+	// echo '</head>';
+	echo '<p id="invalid"> Invalid Login </p>';
 }
-// mysql_close();
 
-// if ($username == 'myk_bn' && $password == 'ewankosayo'){
-// 	echo "Welcome";
-// }else{
-// 	echo "Invalid Login Information";
-// }
+
+mysqli_close($conn);
+
+
 
 ?>
