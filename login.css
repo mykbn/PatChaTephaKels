@@ -6,6 +6,7 @@ body{
  	-o-background-size: cover;
  	background-size: cover;
 }
+
 div#main-div{
 	width: 50%;
 	height: 50%;
@@ -18,13 +19,16 @@ div#main-div{
  	-o-background-size: cover;
  	background-size: cover;*/
 }
+
 div.centered {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
-#unamebox.textbox{
+
+#username-textbox.textbox{
 	position:absolute;
 	width: 70%;
 	height: 10%;
@@ -34,8 +38,10 @@ div.centered {
 	top: 50%;
 	left: 50%;
 	transform:translate(-50%, -50%);
+	-webkit-transform:translate(-50%, -50%);
 }
-#pwordbox.textbox{
+
+#password-textbox.textbox{
 	position:absolute;
 	width: 70%;
 	height: 10%;
@@ -45,9 +51,37 @@ div.centered {
 	top: 50%;
 	left: 50%;
 	transform:translate(-50%, 60%);
+	-webkit-transform:translate(-50%, 60%);
 }
+
 input{
 	font-size: 20px;
 	padding-left: 10px;
+}
 
+.button{
+	position:absolute;
+	width: 30%;
+	height: 10%;
+	background-color: #1E90FF;
+	border: none;
+	outline: none;
+	outline-color: white;
+	border-radius: 5px;
+	font-family: Calibri;
+	font-size: 20px;
+	color: white;
+	top: 50%;
+ 	left: 50%;
+  	transform: translate(-50%, 250%);
+  	-webkit-transform: translate(-50%, 250%);
+}
+
+#invalid{
+	text-align: center;
+	font-family: Calibri;
+	font-size: 15px;
+	color: red;
+	transform: translate(0%, 2770%);
+  	-webkit-transform: translate(0%, 250%);
 }

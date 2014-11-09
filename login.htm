@@ -5,8 +5,8 @@
 </head>
 <script type="text/javascript">
 	function ClearUserOnFocus(){
-		var userNameTextBox = document.getElementById("unamebox");
-		var passWordTextBox = document.getElementById("pwordbox");
+		var userNameTextBox = document.getElementById("username-textbox");
+		var passWordTextBox = document.getElementById("password-textbox");
 		if(userNameTextBox.value=='Username'){
 			userNameTextBox.value='';	
 		} 
@@ -16,8 +16,8 @@
 		}
 	}
 	function ClearPassOnFocus(){
-		var userNameTextBox = document.getElementById("unamebox");
-		var passWordTextBox = document.getElementById("pwordbox");
+		var userNameTextBox = document.getElementById("username-textbox");
+		var passWordTextBox = document.getElementById("password-textbox");
 		if(passWordTextBox.value == 'Password'){
 			passWordTextBox.value = '';	
 			passWordTextBox.type = "password";
@@ -30,10 +30,10 @@
 <body>
 	<div id="main-div" class="centered">
 		<div id="login-form-div">
-			<form>
-				<input class="textbox" type="text" name="username" value="Username" id="unamebox" onfocus="ClearUserOnFocus()">
-				<input class="textbox" type="text" name="password" value="Password" id="pwordbox" onfocus="ClearPassOnFocus()">
-				<button type="button" class="button">Log-in</button>
+			<form action="login.php" method="post">
+				<input class="textbox" type="text" name="username" value="Username" id="username-textbox" onfocus="ClearUserOnFocus()"></input>
+				<input class="textbox" type="text" name="password" value="Password" id="password-textbox" onfocus="ClearPassOnFocus()"></input>
+				<button type="submit" class="button" id="login-button">LOGIN</button>
 			</form>
 		</div>
 	</div>
