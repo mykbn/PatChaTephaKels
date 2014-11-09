@@ -25,6 +25,7 @@ div.centered {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 
 #username-textbox.textbox{
@@ -37,6 +38,7 @@ div.centered {
 	top: 50%;
 	left: 50%;
 	transform:translate(-50%, -50%);
+	-webkit-transform:translate(-50%, -50%);
 }
 
 #password-textbox.textbox{
@@ -49,6 +51,7 @@ div.centered {
 	top: 50%;
 	left: 50%;
 	transform:translate(-50%, 60%);
+	-webkit-transform:translate(-50%, 60%);
 }
 
 input{
@@ -71,5 +74,6 @@ input{
 	top: 50%;
  	left: 50%;
   	transform: translate(-50%, 250%);
+  	-webkit-transform: translate(-50%, 250%);
 }
 }
