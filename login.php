@@ -28,7 +28,8 @@ $serverPassword = $rowPassword["Password"];
 
 //Check if login credentials are correct
 if($inputUsername == $serverUser && $inputPassword == $serverPassword){
-	echo "<br/>Correct Credentials!";
+	// echo "<br/>Correct Credentials!";
+	header("Location: homepage.htm");
 }else{
 	// echo "<br/>Incorrect Login Information";
 	// header("Location: login.htm");
